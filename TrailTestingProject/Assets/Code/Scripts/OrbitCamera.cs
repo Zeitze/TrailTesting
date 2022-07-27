@@ -7,7 +7,9 @@ public class OrbitCamera : MonoBehaviour
 
     [SerializeField] Transform m_Focus = default;
     [SerializeField, Range(1f, 20f)] float m_Distance = 5f;
+    [SerializeField, Min(0f)] float m_ZoomSpeed = 1f;
     [SerializeField, Min(0f)] float m_FocusRadius = 1f;
+
     [SerializeField, Range(0f, 1f)] float m_FocusCentering = 0.5f;
     [SerializeField, Range(1f, 360f)] float m_RotationSpeed = 90f;
     [SerializeField, Range(-89f, 89f)] float m_MinVerticalAngle = -30f, m_MaxVerticalAngle = 60f;
@@ -58,6 +60,13 @@ public class OrbitCamera : MonoBehaviour
         {
             lookRotation = transform.localRotation;
         }
+
+        if (Input.GetAxis("Mouse ScrollWheel") != 0)
+        {
+            Vector2 input = new Vector2(Input.GetAxis("Mouse ScrollWheel"), 0);
+            m_Distance = Mathf.Clamp(m_Distance += m_ZoomSpeed * Time.unscaledDeltaTime * -Mathf.Sign(input.x), 1f, 20f);
+        }
+
         Vector3 lookDirection = lookRotation * Vector3.forward;
         Vector3 lookPosition = m_FocusPoint - lookDirection * m_Distance;
 
@@ -75,6 +84,8 @@ public class OrbitCamera : MonoBehaviour
         }
 
         transform.SetPositionAndRotation(lookPosition, lookRotation);
+        
+        
     }
     private void OnValidate()
     {
@@ -88,6 +99,8 @@ public class OrbitCamera : MonoBehaviour
 
     void UpdateFocusPoint()
     {
+        
+
         m_PreviousFocusPoint = m_FocusPoint;
         Vector3 targetPoint = m_Focus.position;
         if (m_FocusRadius > 0f)
