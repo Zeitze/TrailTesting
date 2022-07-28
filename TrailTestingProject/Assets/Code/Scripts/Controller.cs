@@ -16,7 +16,6 @@ public class Controller : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector2 playerInput;
