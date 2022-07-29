@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a02ce129e0cde242aee486e05aa881c, type: 3}
   m_Name: Cameras
   m_EditorClassIdentifier: 
+  m_DisplayIndex: 0
   m_Cameras:
   - {fileID: 11400000, guid: 0efd844f9dfe1e940aeac31653bcd7e6, type: 2}
   - {fileID: 11400000, guid: b9e4d79ba9fd77a408e1a9f5e3b41c4e, type: 2}
   - {fileID: 11400000, guid: 0f94ceca5e12fff41a180558095a3821, type: 2}
   - {fileID: 11400000, guid: 61f22d74b41ca8641810ac2028b433be, type: 2}
+  - {fileID: 11400000, guid: 1160daa0af1f6cb4daad65d781359859, type: 2}

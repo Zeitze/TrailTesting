@@ -50,7 +50,7 @@ public class SO_Camera : ScriptableObject
     {
         if (m_Camera == null)
         {
-            Debug.LogWarning("Attention ! " + go.name + "is missing a Camera element. The Button script on this will be disable", this);
+            Debug.LogWarning("Attention ! " + go.name + "is missing a Camera element. The CameraManager script on this will be disable", this);
             script.enabled = false;
             return;
         }
