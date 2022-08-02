@@ -8,6 +8,10 @@ using UnityEngine;
 public class SO_TrailRenderer : ScriptableObject
 {
     #region Public Members
+    /// <summary>
+    /// Index of the configuration targeted by this trail renderer
+    /// </summary>
+    public int m_TargetConfig = 0;
     #endregion
 
     #region Private members
@@ -28,7 +32,7 @@ public class SO_TrailRenderer : ScriptableObject
     /// </summary>
     /// <param name="go">GameObject tested</param>
     /// <param name="buttonScript">TrailRendererManager script tested</param>
-    public void TestTrailRenderer(GameObject go, TrailRendererManager script)
+    public virtual void TestTrailRenderer(GameObject go, TrailRendererManager script)
     {
         if (m_TrailRenderer == null)
         {

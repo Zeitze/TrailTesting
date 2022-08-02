@@ -103,6 +103,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AnimatorData: {fileID: 11400000, guid: 175b9f79b314eca4cb172988b1ffb560, type: 2}
+  m_TrailsData:
+  - {fileID: 11400000, guid: 66a1f0c6dde8b8a479e18835f631f292, type: 2}
+  - {fileID: 11400000, guid: 54d52b58a0362064882b8a56236a8e5b, type: 2}
+  - {fileID: 11400000, guid: a6471729e38422b41a8f0710f5e89768, type: 2}
+  - {fileID: 11400000, guid: a5348f37ea38924479e3ea9ddcc86bf2, type: 2}
 --- !u!114 &-3999062953557554001
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,6 +121,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AnimatorData: {fileID: 11400000, guid: 175b9f79b314eca4cb172988b1ffb560, type: 2}
+  m_TrailsData:
+  - {fileID: 11400000, guid: 66a1f0c6dde8b8a479e18835f631f292, type: 2}
+  - {fileID: 11400000, guid: 54d52b58a0362064882b8a56236a8e5b, type: 2}
+  - {fileID: 11400000, guid: a6471729e38422b41a8f0710f5e89768, type: 2}
+  - {fileID: 11400000, guid: a5348f37ea38924479e3ea9ddcc86bf2, type: 2}
 --- !u!114 &-3534212047599675221
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +139,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AnimatorData: {fileID: 11400000, guid: 175b9f79b314eca4cb172988b1ffb560, type: 2}
+  m_TrailsData:
+  - {fileID: 11400000, guid: 66a1f0c6dde8b8a479e18835f631f292, type: 2}
+  - {fileID: 11400000, guid: 54d52b58a0362064882b8a56236a8e5b, type: 2}
+  - {fileID: 11400000, guid: a6471729e38422b41a8f0710f5e89768, type: 2}
+  - {fileID: 11400000, guid: a5348f37ea38924479e3ea9ddcc86bf2, type: 2}
 --- !u!114 &-3276506737535088996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,6 +157,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AnimatorData: {fileID: 11400000, guid: 175b9f79b314eca4cb172988b1ffb560, type: 2}
+  m_TrailsData:
+  - {fileID: 11400000, guid: 66a1f0c6dde8b8a479e18835f631f292, type: 2}
+  - {fileID: 11400000, guid: 54d52b58a0362064882b8a56236a8e5b, type: 2}
+  - {fileID: 11400000, guid: a6471729e38422b41a8f0710f5e89768, type: 2}
+  - {fileID: 11400000, guid: a5348f37ea38924479e3ea9ddcc86bf2, type: 2}
 --- !u!114 &-3008829867904781904
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,6 +175,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AnimatorData: {fileID: 11400000, guid: 175b9f79b314eca4cb172988b1ffb560, type: 2}
+  m_TrailsData:
+  - {fileID: 11400000, guid: 66a1f0c6dde8b8a479e18835f631f292, type: 2}
+  - {fileID: 11400000, guid: 54d52b58a0362064882b8a56236a8e5b, type: 2}
+  - {fileID: 11400000, guid: a6471729e38422b41a8f0710f5e89768, type: 2}
+  - {fileID: 11400000, guid: a5348f37ea38924479e3ea9ddcc86bf2, type: 2}
 --- !u!1101 &-2582953140662139183
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -275,7 +300,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
+  - m_Name: IsTrailsEmitting
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 1
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

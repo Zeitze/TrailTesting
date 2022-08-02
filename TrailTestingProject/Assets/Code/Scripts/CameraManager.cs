@@ -19,6 +19,11 @@ public class CameraManager : MonoBehaviour
     #endregion
 
     #region Unity Methods
+    public virtual void Awake()
+    {
+        FillData();
+        TestData();
+    }
     public virtual void OnEnable()
     {
         FillData();

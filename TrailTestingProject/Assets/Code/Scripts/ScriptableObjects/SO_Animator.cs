@@ -9,6 +9,7 @@ public class SO_Animator : ScriptableObject
 {
     #region Public Members
     public string m_ParameterNameA;
+    public string m_ParameterNameB;
     #endregion
 
     #region private members

@@ -20,14 +20,16 @@ public class SwitchCamera : MonoBehaviour
         int actCam = m_CamerasData.activeCameraIndex = 0;
         m_CamerasData.m_Cameras[actCam].camera.enabled = true;
         SwitchingCamera(actCam);
-    }
-    private void OnEnable()
-    {
+
         //Forcing all the camera on display 1 at runtime
         for (int i = 0; i < m_CamerasData.m_Cameras.Length; i++)
         {
             m_CamerasData.m_Cameras[i].camera.targetDisplay = m_CamerasData.m_DisplayIndex;
         }
+    }
+    private void OnEnable()
+    {
+        
     }
     private void Update()
     {
