@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3802501670377625801
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_TrailTest_Lit_Static02
-  m_Shader: {fileID: -6465566751694194690, guid: 6f80ad2083f46854ead1a1a482259e55,
+  m_Name: MAT_TrailMask
+  m_Shader: {fileID: -6465566751694194690, guid: a383a30576f0b444da170962314aedd8,
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -21,14 +34,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_acc31ef251a64e6e84e655f1673f2658:
-        m_Texture: {fileID: 2800000, guid: 877afb2abc3f43a40a135e4353cddff6, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - Texture2D_e9fde90db0fb4f69b485ec867fd84f2c:
-        m_Texture: {fileID: 2800000, guid: c7a46b4111fffe4429091a274d70420d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -87,22 +92,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_1c931b28aa6b4993b3a8f15c871809fe: 0.518
-    - Vector1_224414b0cb5d4d93acf0ae120bff0df1: 10
-    - Vector1_233c0e783c0f4234953df9a207b18664: 0
-    - Vector1_2e03a4bd75ed4216bab2416daa5da53b: -0.2
-    - Vector1_2f6c7ebaed12494583ee0d0e0202deaa: -0.6
-    - Vector1_35525faf9dba4d1d8261bfd7eee2d738: 0
-    - Vector1_385a78c9976d49e1aea2371061d90181: 0
-    - Vector1_38fa1435c404496db2e90809cbfaabce: 1
-    - Vector1_51ddf1c94de24a1682acf8f3da2b48f1: 10
-    - Vector1_9cb124462d414f618fcb8235f0f22db6: 1
-    - Vector1_a174d34472eb46febc4323f2127ab8ba: 0
-    - Vector1_bf66f90ea63448ca904c4228575fe8a4: 1
-    - Vector1_c2f200ade9364807953f28b1ce14d540: 0
-    - Vector1_c3c93b99932e4cffa9eac7c3a7d99067: 0
-    - Vector1_c67ad23e2e6f4819a6671376b70e44c0: 1
-    - Vector1_f79b625ee99a4e3692f9b8908febe57d: 1
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -114,18 +103,16 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
+    - _FadeAnim: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _LeprColorMaxPox: 1.06
-    - _LerpColorMinPos: 0
-    - _LerpColorShapeStrenght: 0.513
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
+    - _ReceiveShadows: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -134,26 +121,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_46bd1ebd36a342d2be46a7fc2310dc5b: {r: 0.6862745, g: 0, b: 0.5568628, a: 1}
-    - Color_b48e9f88e0d340e8bd17584d386d4b29: {r: 0.017641952, g: 0.47353154, b: 0.46207705,
-        a: 1}
-    - Vector2_77aa1652903547bfb29a7c2d9ed07037: {r: 1, g: 1, b: 0, a: 0}
-    - Vector2_8e7dd02f5f3b4fa889506119e0e6e53c: {r: 2, g: 2.13, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &7140393244984042503
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 5

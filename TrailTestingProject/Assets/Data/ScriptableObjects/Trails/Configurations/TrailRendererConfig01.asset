@@ -36,10 +36,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_Time: 1.3
-  m_MinVertexDistance: 0.05
+  m_Time: 0.4
+  m_MinVertexDistance: 0.02
   m_Autodestruct: 0
-  m_Emitting: 1
+  m_Emitting: 0
   m_Color:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}

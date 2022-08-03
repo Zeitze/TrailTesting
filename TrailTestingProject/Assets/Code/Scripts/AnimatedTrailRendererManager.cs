@@ -5,11 +5,13 @@ using UnityEngine;
 public class AnimatedTrailRendererManager : TrailRendererManager
 {
     #region Public Members
-    [Range(0f, 1f)] public float m_FadeDefault;
-    [Range(0f, 1f)] public float m_FadeAdjust;
+    public float m_FadeDebug;
+    public AnimationCurve m_FadeCurve;
     #endregion
 
     #region Private members
+    private float m_CurrentTime;
+    //private int m_SegmentCount;
     #endregion
 
     #region Getter Setter
@@ -22,16 +24,35 @@ public class AnimatedTrailRendererManager : TrailRendererManager
     }
     private void Update()
     {
-        if (m_TrailRendererData.trailRenderer.emitting)
-        {
-            m_TrailRendererData.trailRenderer.sharedMaterial.SetFloat("_FadeAnim", 0f);
-            return;
-        }
-        float percent = 1f / ((float)m_TrailRendererData.trailRenderer.positionCount*m_FadeAdjust + 0.0000000001f);
-        m_TrailRendererData.trailRenderer.sharedMaterial.SetFloat("_FadeAnim", Mathf.Clamp01(percent));
+
+    }
+    private void FixedUpdate()
+    {
+        Test();
     }
     #endregion
 
     #region Public methods
+    public void Test()
+    {
+        
+        if (m_TrailRendererData.trailRenderer.emitting)
+        {
+            m_TrailRendererData.trailRenderer.sharedMaterial.SetFloat("_FadeAnim", 0f);
+            m_CurrentTime = 0;
+            //m_SegmentCount = m_TrailRendererData.trailRenderer.positionCount;
+            return;
+        }
+        m_CurrentTime += Time.unscaledDeltaTime;
+        float percentTime = m_CurrentTime / m_TrailRendererData.trailRenderer.time;
+        float percentCurve = m_FadeCurve.Evaluate(percentTime);
+        /*
+        m_SegmentCount -= 1;
+        float percentGeo = (float)m_SegmentCount / (float)m_TrailRendererData.trailRenderer.positionCount;
+        */
+        m_TrailRendererData.trailRenderer.sharedMaterial.SetFloat("_FadeAnim",percentCurve);
+        m_FadeDebug = m_TrailRendererData.trailRenderer.material.GetFloat("_FadeAnim");
+
+    }
     #endregion
 }
