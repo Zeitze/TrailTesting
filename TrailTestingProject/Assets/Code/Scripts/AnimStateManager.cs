@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteAlways]
 public class AnimStateManager : StateMachineBehaviour
 {
     #region Public Members
@@ -27,6 +26,11 @@ public class AnimStateManager : StateMachineBehaviour
     }
     public void ActivateTrail(SO_TrailRenderer trailData, bool isEmitting)
     {
+        if (trailData.trailRenderer == null)
+        {
+            Debug.LogWarning("SO_TrailRenderer has not been yet assign, " + this + "will not be executed properly.");
+            return;
+        }
         trailData.trailRenderer.emitting = isEmitting;
     }
     #endregion
@@ -34,6 +38,7 @@ public class AnimStateManager : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         SwitchAnim(m_AnimatorData.m_ParameterNameA);
+        
         SetAreTrailsEmitting(m_AnimatorData.m_ParameterNameB, false);
         for (int i = 0; i < m_TrailsData.Length; i++)
         {

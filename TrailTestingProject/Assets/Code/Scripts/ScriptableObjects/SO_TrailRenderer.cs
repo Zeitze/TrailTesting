@@ -31,7 +31,7 @@ public class SO_TrailRenderer : ScriptableObject
     /// Test the variables of the SO_Camera and desactivate the script if found empty
     /// </summary>
     /// <param name="go">GameObject tested</param>
-    /// <param name="buttonScript">TrailRendererManager script tested</param>
+    /// <param name="script">TrailRendererManager script tested</param>
     public virtual void TestTrailRenderer(GameObject go, TrailRendererManager script)
     {
         if (m_TrailRenderer == null)
