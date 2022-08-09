@@ -7,6 +7,7 @@ using UnityEngine;
 public class LinePositionsSetter : MonoBehaviour
 {
     public SO_Vector3Array m_Positions;
+    public SO_Transform m_ParentTransformData;
 
     private LineRenderer m_LineRenderer;
     // Start is called before the first frame update
@@ -15,6 +16,9 @@ public class LinePositionsSetter : MonoBehaviour
         m_LineRenderer = GetComponent<LineRenderer>();
         m_LineRenderer.positionCount = m_Positions.array.Length;
         m_LineRenderer.SetPositions(m_Positions.array);
+
+        transform.localPosition = m_ParentTransformData.transform.position;
+        transform.localRotation = m_ParentTransformData.transform.rotation;
     }
 
 }

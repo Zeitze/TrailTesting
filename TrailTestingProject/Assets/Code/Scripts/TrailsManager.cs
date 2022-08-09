@@ -22,6 +22,11 @@ public class TrailsManager : MonoBehaviour
         TestData();
         for (int i = 0; i < m_TrailsData.Length; i++)
         {
+            if (m_TrailsData[i].trailRenderer == null)
+            {
+                Debug.LogWarning("Trail data null. A trail linked in the array of the trails manager is probably not active. Trail index :"+i);
+                break;
+            }
             m_TrailsData[i].trailRenderer.widthCurve = m_TrailConfig[m_TrailsData[i].m_TargetConfig].m_Width;
             m_TrailsData[i].trailRenderer.time = m_TrailConfig[m_TrailsData[i].m_TargetConfig].m_Time;
             m_TrailsData[i].trailRenderer.minVertexDistance = m_TrailConfig[m_TrailsData[i].m_TargetConfig].m_MinVertexDistance;

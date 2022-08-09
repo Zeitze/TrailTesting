@@ -556,7 +556,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252306569}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.606867, y: 2.0524192, z: 0}
+  m_LocalPosition: {x: 33.55, y: 1.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -838,6 +838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 497932305}
+  - component: {fileID: 497932306}
   m_Layer: 0
   m_Name: AnimatedCharacterForTrails
   m_TagString: Untagged
@@ -862,6 +863,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &497932306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497932304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f0ee14ae8bce84cbae7d63d62e58f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformData: {fileID: 11400000, guid: 24c5b1c5c1589394287f03bd04ff65c7, type: 2}
 --- !u!1 &630777051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741672317}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.756868, y: 1.3324193, z: 0}
+  m_LocalPosition: {x: 23.7, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2913,8 +2927,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928588766}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029914077}
-  m_LocalPosition: {x: -0, y: 0, z: -3}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029504295}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3088,6 +3102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Positions: {fileID: 11400000, guid: 83b0da4af2932454ab448ef0ab57074f, type: 2}
+  m_ParentTransformData: {fileID: 11400000, guid: 24c5b1c5c1589394287f03bd04ff65c7,
+    type: 2}
 --- !u!114 &1928588770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3730,6 +3746,7 @@ GameObject:
   - component: {fileID: 543450651688300380}
   - component: {fileID: 5866666019894342950}
   - component: {fileID: 1076977165}
+  - component: {fileID: 5866666019894342951}
   m_Layer: 0
   m_Name: MixamoModel
   m_TagString: Untagged
@@ -5066,6 +5083,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5866666019894342951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147953284582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e599b8722ec70f743b76eb5c09e1b349, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrailRendererData: {fileID: 11400000, guid: a4c269f0bf79d8b4b902d1cd4b9b9059,
+    type: 2}
+  m_PositionsData: {fileID: 11400000, guid: 83b0da4af2932454ab448ef0ab57074f, type: 2}
 --- !u!4 &5901452233787112927
 Transform:
   m_ObjectHideFlags: 0
