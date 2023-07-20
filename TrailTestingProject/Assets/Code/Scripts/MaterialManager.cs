@@ -10,6 +10,10 @@ public class MaterialManager : MonoBehaviour
     /// SO containing the data of the material
     /// </summary>
     public SO_Material m_MaterialData;
+    /// <summary>
+    /// SOs containing the data of the exposed material properties
+    /// </summary>
+    public SO_ShaderProperty[] m_ShaderProperties;
     #endregion
 
     #region Private members
@@ -19,6 +23,17 @@ public class MaterialManager : MonoBehaviour
     public virtual void OnEnable()
     {
         TestData();
+
+        if (m_ShaderProperties.Length <= 0)
+        {
+            Debug.LogWarning("No materiel property found");
+            return;
+        }
+
+        for (int i = 0; i < m_ShaderProperties.Length; i++)
+        {
+            //m_ShaderProperties[i].m_PropertyName
+        }
     }
     #endregion
 

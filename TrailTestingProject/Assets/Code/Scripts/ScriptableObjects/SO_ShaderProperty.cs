@@ -90,7 +90,7 @@ public class SO_ShaderProperty : ScriptableObject
 
     #region Public Methods
     /// <summary>
-    /// Test the variables of the SO_Button and desavtivate the script if found empty
+    /// Test the variables of the SO_ShaderProperty and desactivate the script if found empty
     /// </summary>
     /// <param name="go">GameObject tested</param>
     /// <param name="script">MaterialManager script tested</param>
@@ -172,6 +172,66 @@ public class ButtonEditor : Editor
         {
             property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
             property.m_Vector4Value = EditorGUILayout.Vector4Field(fieldName02, property.m_Vector4Value);
+        }
+        if (property.m_Type == EShaderVariableType.Color)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            property.m_ColorValue = EditorGUILayout.ColorField(fieldName02, property.m_ColorValue);
+        }
+        if (property.m_Type == EShaderVariableType.Boolean)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            property.m_BooleanValue = EditorGUILayout.Toggle(fieldName02, property.m_BooleanValue);
+        }
+        if (property.m_Type == EShaderVariableType.Gradient)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            property.m_GradientValue = EditorGUILayout.GradientField(fieldName02, property.m_GradientValue);
+        }
+        if (property.m_Type == EShaderVariableType.Texture2D)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            property.m_Texture2D = (Texture2D)EditorGUILayout.ObjectField(property.m_Texture2D, typeof(Texture2D), false, GUILayout.Width(70), GUILayout.Height(70));
+        }
+        if (property.m_Type == EShaderVariableType.Texture2DArray)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            property.m_Texture2DArray = (Texture2DArray)EditorGUILayout.ObjectField(property.m_Texture2DArray, typeof(Texture2DArray), false, GUILayout.Width(70), GUILayout.Height(70));
+        }
+        if (property.m_Type == EShaderVariableType.Texture3D)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            property.m_Texture3D = (Texture3D)EditorGUILayout.ObjectField(property.m_Texture3D, typeof(Texture3D), false, GUILayout.Width(70), GUILayout.Height(70));
+        }
+        if (property.m_Type == EShaderVariableType.Cubemap)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            property.m_Cubemap = (Cubemap)EditorGUILayout.ObjectField(property.m_Cubemap, typeof(Cubemap), false, GUILayout.Width(70), GUILayout.Height(70));
+        }
+        if (property.m_Type == EShaderVariableType.VirtualTexture)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            EditorGUILayout.HelpBox("Not implemented yet", MessageType.Info);
+        }
+        if (property.m_Type == EShaderVariableType.Matrix2)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            EditorGUILayout.HelpBox("Not implemented yet", MessageType.Info);
+        }
+        if (property.m_Type == EShaderVariableType.Matrix3)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            EditorGUILayout.HelpBox("Not implemented yet", MessageType.Info);
+        }
+        if (property.m_Type == EShaderVariableType.Matrix4)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            EditorGUILayout.HelpBox("Not implemented yet", MessageType.Info);
+        }
+        if (property.m_Type == EShaderVariableType.SamplerState)
+        {
+            property.m_PropertyName = EditorGUILayout.TextField(fieldName01, property.m_PropertyName);
+            EditorGUILayout.HelpBox("Not implemented yet", MessageType.Info);
         }
 
     }
